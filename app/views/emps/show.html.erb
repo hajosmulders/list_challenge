@@ -1,0 +1,16 @@
+<p>
+  <table border="1" id="tblemployee">
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Role</th>
+      <th>Emp ID</th>
+    </tr>
+    <tr>
+      <td><%=@emp.first_name %></td>
+      <td><%=@emp.last_name %></td>
+      <td><%=@emp.role %></td>
+      <td><%=@emp.emp_id %></td>
+    </tr>
+</p>
+<%= link_to 'Back', emps_path %>

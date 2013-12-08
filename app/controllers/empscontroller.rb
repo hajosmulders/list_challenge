@@ -1,2 +1,0 @@
-class EmpsController < ApplicationController
-end
