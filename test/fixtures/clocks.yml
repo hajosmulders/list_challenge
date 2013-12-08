@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  clock_in: 2013-12-08 22:56:52
+  clock_out: 2013-12-08 22:56:52
+  work_time: 2013-12-08 22:56:52
+  emp_id: 
+
+two:
+  clock_in: 2013-12-08 22:56:52
+  clock_out: 2013-12-08 22:56:52
+  work_time: 2013-12-08 22:56:52
+  emp_id: 
