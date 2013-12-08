@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131208202218) do
+ActiveRecord::Schema.define(version: 20131208225652) do
+
+  create_table "clocks", force: true do |t|
+    t.datetime "clock_in"
+    t.datetime "clock_out"
+    t.time     "work_time"
+    t.integer  "emp_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "clocks", ["emp_id"], name: "index_clocks_on_emp_id", using: :btree
 
   create_table "emps", force: true do |t|
     t.string   "first_name"
