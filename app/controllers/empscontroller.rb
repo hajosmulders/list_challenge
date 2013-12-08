@@ -1,0 +1,2 @@
+class EmpsController < ApplicationController
+end
