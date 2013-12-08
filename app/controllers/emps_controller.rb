@@ -12,6 +12,6 @@ class EmpsController < ApplicationController
   
   private
   def emp_params
-    params.require(:emp).permit(:first_name, :last_name, :role, :emp_id)
+    params.require(:emp).permit(:first_name, :last_name, :role)
   end
 end
