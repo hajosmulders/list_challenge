@@ -10,5 +10,24 @@
       <td><%=@emp.last_name %></td>
       <td><%=@emp.role %></td>
     </tr>
+  </table>
 </p>
+<h2>Time</h2>
+<p>
+  <table border="1" id="tblclock">
+    <tr>
+      <th>Clock In</th>
+      <th>Clock Out</th>
+      <th>Time Worked</th>
+    </tr>
+    <% @emp.clocks.each do |clock| %>
+    <tr>
+      <td><%=clock.clock_in %></td>
+      <td><%=clock.clock_out %></td>
+      <td><%=clock.work_time %></td>
+    </tr>
+    <% end %>
+  </table>
+</p>
+
 <%= link_to 'Back', emps_path %>
