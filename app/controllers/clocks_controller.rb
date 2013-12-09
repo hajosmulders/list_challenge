@@ -12,4 +12,8 @@ class ClocksController < ApplicationController
   def edit
     @clock = Clock.find(params[:id])
   end
+  
+  def index
+    @clocks = Clock.all
+  end
 end
