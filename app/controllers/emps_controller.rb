@@ -1,7 +1,9 @@
 class EmpsController < ApplicationController
+  def new
+  end
+  
   def create
     @emp = Emp.new(emp_params)
-
     @emp.save
     redirect_to @emp
   end
