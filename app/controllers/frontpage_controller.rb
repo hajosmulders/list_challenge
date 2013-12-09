@@ -6,6 +6,12 @@ class FrontpageController < ApplicationController
     end
   end
   
+  def destroy
+    @emp = Emp.find(params[:emp_id])
+    @emp.destroy
+    redirect_to "/emps/"
+  end
+  
   def clocker
     @emp = Emp.find(params[:emp_id])
     @clock = @emp.clocks.last

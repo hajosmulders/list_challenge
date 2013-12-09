@@ -5,12 +5,15 @@
       <th>First Name</th>
       <th>Last Name</th>
       <th>Role</th>
+      <th>!!! DELETE !!!</th>
     </tr>
     <% @emps.each do |emp| %>
     <tr>
       <td><%=@emp.first_name %></td>
       <td><%=@emp.last_name %></td>
       <td><%=@emp.role %></td>
+      <td><%= link_to 'Destroy', emps_path(@emp),
+  :confirm => 'Are you sure?', :method => :delete %></td>
     </tr>
     <% end %>
 </p>

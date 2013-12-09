@@ -5,6 +5,7 @@ ListChallenge::Application.routes.draw do
   get 'clock_in/:emp_id' => 'frontpage#clock_in', as: 'clock_in'
   get 'clock_out/:emp_id' => 'frontpage#clock_out', as: 'clock_out'
   get 'clocker/:emp_id' => 'frontpage#clocker', as: 'clocker'
+  get 'emps/delete/:emp_id' => 'frontpage#destroy', as: 'del_emp'
   root "frontpage#index"
 end
   # The priority is based upon order of creation: first created -> highest priority.
