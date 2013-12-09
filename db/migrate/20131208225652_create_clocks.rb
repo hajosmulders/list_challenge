@@ -3,7 +3,7 @@ class CreateClocks < ActiveRecord::Migration
     create_table :clocks do |t|
       t.timestamp :clock_in
       t.timestamp :clock_out
-      t.time :work_time
+      t.integer :work_time
       t.references :emp, index: true
 
       t.timestamps

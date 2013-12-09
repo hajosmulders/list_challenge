@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20131208225652) do
   create_table "clocks", force: true do |t|
     t.datetime "clock_in"
     t.datetime "clock_out"
-    t.time     "work_time"
+    t.integer  "work_time"
     t.integer  "emp_id"
     t.datetime "created_at"
     t.datetime "updated_at"
