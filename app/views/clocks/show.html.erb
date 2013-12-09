@@ -1,0 +1,17 @@
+<h2>Time</h2>
+<p>
+  <table border="1" id="tblclock">
+    <tr>
+      <th>Clock In</th>
+      <th>Clock Out</th>
+      <th>Time Worked</th>
+    </tr>
+    <tr>
+      <td><%=@clock.clock_in %></td>
+      <td><%=@clock.clock_out %></td>
+      <td><%=@clock.work_time %></td>
+    </tr>
+  </table>
+</p>
+
+<%= link_to 'Back', emp_clocks_path %>

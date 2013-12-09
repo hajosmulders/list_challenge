@@ -1,0 +1,21 @@
+<%= form_for :clock, url: clocks_path do |f| %>
+    <p>
+      <%= f.label :clock_in %><br>
+      <%= f.text_field :clock_in %>
+    </p>
+
+    <p>
+      <%= f.label :clock_out %><br>
+      <%= f.text_field :clock_out %>
+    </p>
+
+    <p>
+      <%= f.label :work_time %><br>
+      <%= f.text_field :work_time %>
+    </p>
+
+    <p>
+      <%= f.submit %>
+     </p>
+<% end %>
+<%= link_to 'Back', clocks_path %>

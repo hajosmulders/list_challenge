@@ -4,4 +4,8 @@ class ClocksController < ApplicationController
     @clock = @emp.clocks.create(params[:clock].permit(:clock_in, :clock_out))
     redirect_to emp_path(@emp)
   end
+  
+  def show
+    @clock = Clock.find(params[:id])
+  end
 end
