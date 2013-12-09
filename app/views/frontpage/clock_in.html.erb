@@ -1,2 +1,24 @@
 <h1>You have been clocked in at: <%=@clock.clock_in %></h1>
+<% if @all_clocks %>
+  <table id="tbl_all_clocks">
+    <tr>
+      <th>Time In</th>
+      <th>Time Out</th>
+      <th>Time Worked</th>
+      <th>Employee ID</th>
+    </tr>
+    <% @all_clocks.each do |clock| %>
+    <tr>
+      <td><%=clock.clock_in %></td>
+      <td><%=clock.clock_out %></td>
+      <% if clock.work_time %>
+      <td><%=distance_of_time_in_words(clock.work_time) %></td>
+      <% else %>
+      <td>Employee still clocked in</td>
+      <% end %>
+      <td><%=clock.emp_id %></td>
+    </tr>
+    <% end %>
+  </table>
+<% end %>
 

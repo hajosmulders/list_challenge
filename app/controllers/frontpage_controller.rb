@@ -28,10 +28,13 @@ class FrontpageController < ApplicationController
   
   def clock_in
     @emp = Emp.find(params[:emp_id])
-    @clock = Clock.new#create(clock_in: Time.now, emp_id: @emp.id)
+    @clock = Clock.new
     @clock.clock_in = Time.now
     @clock.emp_id = @emp.id
     @clock.save!
+    if @emp.role == "admin"
+      @all_clocks = Clock.all
+    end
   end
   
   def clock_out

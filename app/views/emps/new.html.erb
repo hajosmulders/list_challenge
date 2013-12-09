@@ -12,7 +12,7 @@
  
   <p>
     <%= f.label :role %><br>
-    <%= f.text_field :role %>
+    <%= f.select :role, options_for_select(%w[admin employee]) %>
   </p>
   <p>
     <%= f.submit %>
