@@ -10,6 +10,14 @@ class EmpsController < ApplicationController
     @emp = Emp.find(params[:id])
   end
   
+  def edit
+    @emp = Emp.find(params[:id])
+  end
+  
+  def index
+    @emps = Emp.all
+  end
+  
   private
   def emp_params
     params.require(:emp).permit(:first_name, :last_name, :role)

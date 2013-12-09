@@ -1,5 +1,7 @@
-<%= form_for :clock, url: emp_clocks_path do |f| %>
-    <p>
+<h1>Edit Time Period</h1>
+
+<%= form_for :clock, url: emp_clock(@clock), method: :patch do |f| %>
+<p>
       <%= f.label :clock_in %><br>
       <%= f.text_field :clock_in %>
     </p>
@@ -18,4 +20,4 @@
       <%= f.submit %>
      </p>
 <% end %>
-<%= link_to 'Back', emp_clocks_path %>
+<%= link_to 'Back', clocks_path %>

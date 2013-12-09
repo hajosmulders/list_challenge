@@ -8,4 +8,8 @@ class ClocksController < ApplicationController
   def show
     @clock = Clock.find(params[:id])
   end
+  
+  def edit
+    @clock = Clock.find(params[:id])
+  end
 end

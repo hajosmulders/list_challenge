@@ -1,0 +1,22 @@
+<h1>Edit Employee</h1>
+ 
+<%= form_for :emp, url: emp_path(@emp), method: :patch do |f| %>
+      <p>
+      <%= f.label :first_name %><br>
+      <%= f.text_field :first_name %>
+    </p>
+
+    <p>
+      <%= f.label :last_name %><br>
+      <%= f.text_field :last_name %>
+    </p>
+
+    <p>
+      <%= f.label :role %><br>
+      <%= f.text_field :role %>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
+<% end %>
+<%= link_to 'Back', emps_path %>
