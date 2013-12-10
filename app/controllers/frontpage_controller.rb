@@ -2,7 +2,11 @@ class FrontpageController < ApplicationController
   def index
     if params[:login] != nil
       @emp = Emp.find_by login: params[:login]
-      redirect_to "/clocker/"+@emp.id.to_s()
+      if @emp == nil
+        redirect_to "/"
+      else
+        redirect_to "/clocker/"+@emp.id.to_s()
+      end
     end
   end
   

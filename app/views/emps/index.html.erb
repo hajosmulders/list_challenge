@@ -5,6 +5,7 @@
       <th>First Name</th>
       <th>Last Name</th>
       <th>Role</th>
+      <th>Login</th>
       <th>!!! DELETE !!!</th>
     </tr>
     <% @emps.each do |emp| %>
@@ -12,6 +13,7 @@
       <td><%=emp.first_name %></td>
       <td><%=emp.last_name %></td>
       <td><%=emp.role %></td>
+      <td><%=emp.login %></td>
       <td><%= link_to 'Delete', "/emps/delete/"+emp.id.to_s(),
   :confirm => 'Are you sure?'%></td>
     </tr>
