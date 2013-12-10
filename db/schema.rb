@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131208225652) do
+ActiveRecord::Schema.define(version: 20131210152157) do
 
   create_table "clocks", force: true do |t|
     t.datetime "clock_in"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20131208225652) do
     t.string   "role"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "login"
   end
 
 end
